@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     });
 
 // Start the server
-const PORT = 5000;
+const PORT = 5050;
 
 // connectDb().then(() => {
   app.listen(PORT, () => {
