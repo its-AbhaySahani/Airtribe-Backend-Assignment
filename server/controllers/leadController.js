@@ -2,7 +2,7 @@ const conn = require('../database/conn');
 
 exports.updateLead = (req, res) => {
     const { status } = req.body;
-    const sql = 'UPDATE Leads SET status = ? WHERE lead_id = ?';
+    const sql = 'UPDATE Application SET status = ? WHERE lead_id = ?';
     conn.query(sql, [status, req.params.id], (err, result) => {
         if (err) throw err;
         res.send(result);
