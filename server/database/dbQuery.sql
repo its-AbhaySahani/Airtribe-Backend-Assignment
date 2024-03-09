@@ -39,7 +39,7 @@ CREATE TABLE Application (
     application_id INT AUTO_INCREMENT PRIMARY KEY,
     lead_id INT,
     course_id INT,
-    status ENUM('Pending', 'Accepted', 'Rejected', 'Waitlist'),
+    status ENUM( 'Accept', 'Reject', 'Waitlist'),
     FOREIGN KEY (lead_id) REFERENCES Leads(lead_id),
     FOREIGN KEY (course_id) REFERENCES Courses(course_id)
 );
