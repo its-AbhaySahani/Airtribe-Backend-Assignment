@@ -43,3 +43,26 @@ CREATE TABLE Application (
     FOREIGN KEY (lead_id) REFERENCES Leads(lead_id),
     FOREIGN KEY (course_id) REFERENCES Courses(course_id)
 );
+
+-- Insert dummy data for Instructors table
+INSERT INTO Instructors (name, email)
+VALUES
+    ('John Doe', 'john@example.com'),
+    ('Jane Smith', 'jane@example.com'),
+    ('Michael Johnson', 'michael@example.com'),
+    ('Emily Davis', 'emily@example.com'),
+    ('David Brown', 'david@example.com');
+
+-- Insert dummy data for Leads table
+INSERT INTO Leads (name, email, phone_number, linkedin_profile)
+VALUES
+    ('Alice Johnson', 'alice@example.com', '1234567890', 'https://www.linkedin.com/in/alice'),
+    ('Bob Smith', 'bob@example.com', '9876543210', 'https://www.linkedin.com/in/bob'),
+    ('Charlie Brown', 'charlie@example.com', '1112223333', 'https://www.linkedin.com/in/charlie'),
+    ('Diana Taylor', 'diana@example.com', '4445556666', 'https://www.linkedin.com/in/diana'),
+    ('Eva Miller', 'eva@example.com', '7778889999', 'https://www.linkedin.com/in/eva'),
+    ('Frank Wilson', 'frank@example.com', '0001112222', 'https://www.linkedin.com/in/frank'),
+    ('Grace Anderson', 'grace@example.com', '3334445555', 'https://www.linkedin.com/in/grace'),
+    ('Henry Lee', 'henry@example.com', '6667778888', 'https://www.linkedin.com/in/henry'),
+    ('Ivy Martinez', 'ivy@example.com', '9990001111', 'https://www.linkedin.com/in/ivy'),
+    ('Jack Harris', 'jack@example.com', '2223334444', 'https://www.linkedin.com/in/jack');
