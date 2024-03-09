@@ -3,12 +3,13 @@ const app = express();
 const cors = require("cors");
 const conn = require("./database/conn");
 const dotenv = require("dotenv");
+const routes = require("./routes/route"); // import routes
 
 dotenv.config();
 
 app.use(cors());
 app.use(express.json());
-// app.use(require('./router/auth'));
+app.use(routes); // use routes as middleware
 
 app.get("/", (req, res) => {
   res.send("Heyy, Welcome to the Airtribe server!");

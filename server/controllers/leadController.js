@@ -26,3 +26,31 @@ exports.addComment = (req, res) => {
         res.send(result);
     });
 };
+
+
+// For getting lead course details
+exports.getLeadCourseDetails = (req, res) => {
+    const sql = `
+        SELECT 
+            Leads.lead_id, 
+            Leads.name AS lead_name, 
+            Leads.email AS lead_email, 
+            Instructors.instructor_id, 
+            Instructors.name AS instructor_name, 
+            Instructors.email AS instructor_email, 
+            Courses.name AS course_name, 
+            Application.status AS application_status
+        FROM 
+            Application
+        JOIN 
+            Leads ON Application.lead_id = Leads.lead_id
+        JOIN 
+            Courses ON Application.course_id = Courses.course_id
+        JOIN 
+            Instructors ON Courses.instructor_id = Instructors.instructor_id
+    `;
+    conn.query(sql, (err, result) => {
+        if (err) throw err;
+        res.send(result);
+    });
+};
