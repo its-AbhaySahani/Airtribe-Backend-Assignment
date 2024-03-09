@@ -23,6 +23,11 @@ exports.registerCourse = (req, res) => {
     const sql = 'INSERT INTO Leads (name, email, phone_number, linkedin_profile, course_id) VALUES (?, ?, ?, ?, ?)';
     conn.query(sql, [name, email, phone_number, linkedin_profile, req.params.id], (err, result) => {
         if (err) throw err;
-        res.send(result);
+        // After inserting the lead, insert a new row into the Application table
+        const applicationSql = 'INSERT INTO Application (lead_id, course_id, status) VALUES (?, ?, "Waitlist")';
+        conn.query(applicationSql, [result.insertId, req.params.id], (err, result) => {
+            if (err) throw err;
+            res.send(result);
+        });
     });
 };
