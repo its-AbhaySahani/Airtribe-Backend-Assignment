@@ -1,5 +1,7 @@
 # 🚀 Airtribe-Backend-Assignment
 
+`Node Js` + `MySQL` 
+
 This project is a backend server for the Airtribe application. It's built with Node.js and Express, and uses MySQL for the database.
 
 ## Important Links
@@ -37,7 +39,7 @@ The routes for this project are defined in `server/routes/route.js`. The logic f
 To build and run the Docker container for this project, use the following command:
 
 ```sh
-docker build -t airtribe-backend-assignment .
+docker-compose up -d --build .
 docker run -p 5050:5050 airtribe-backend-assignment
 
 
@@ -49,7 +51,8 @@ Set up the database by running the SQL queries in server/database/dbQuery.sql.
 Start the server with node server/server.js.
 
 
-📞 Contact
+## Developer
 - Abhay Sahani ( 12115826 )
+Github: its-abhaysahani
 
 ```
