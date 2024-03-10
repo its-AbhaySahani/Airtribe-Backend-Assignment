@@ -6,7 +6,7 @@ CREATE TABLE Instructors (
 );
 
 -- Create Courses table
-CREATE TABLE Courses (
+CREATE TABLE Courses (  
     course_id INT AUTO_INCREMENT PRIMARY KEY,
     instructor_id INT,
     name VARCHAR(255),
@@ -22,7 +22,10 @@ CREATE TABLE Leads (
     email VARCHAR(255),
     phone_number VARCHAR(15),
     linkedin_profile VARCHAR(255),
+    course_id INT,
+    FOREIGN KEY (course_id) REFERENCES Courses(course_id)
 );
+
 
 -- Create Comments table
 CREATE TABLE Comments (
