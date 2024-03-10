@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS airtribe;
+USE airtribe;
+
 -- Create Instructors table
 CREATE TABLE Instructors (
     instructor_id INT AUTO_INCREMENT PRIMARY KEY,
