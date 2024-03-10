@@ -15,6 +15,9 @@ The database for this project is structured as follows:
 - `Comments`: This table stores comment information. Each comment has a `comment_id`, `lead_id`, `instructor_id`, and `comment`.
 - `Application`: This table stores application information. Each application has an `application_id`, `lead_id`, `course_id`, and `status`.
 
+![EER Diagram](server/database/errDiagram.png)
+
+
 ## 📁 File Structure
 
 The file structure for this project is as follows:
