@@ -13,7 +13,7 @@ The database for this project is structured as follows:
 
 - `Instructors`: This table stores instructor information. Each instructor has an `instructor_id`, `name`, and `email`.
 - `Courses`: This table stores course information. Each course has a `course_id`, `instructor_id`, `name`, `max_seats`, and `start_date`.
-- `Leads`: This table stores lead information. Each lead has a `lead_id`, `name`, `email`, `phone_number`, and `linkedin_profile`.
+- `Leads`: This table stores lead information. Each lead has a `lead_id`, `name`, `email`, `phone_number`, `linkedin_profile` and `course_id`.
 - `Comments`: This table stores comment information. Each comment has a `comment_id`, `lead_id`, `instructor_id`, and `comment`.
 - `Application`: This table stores application information. Each application has an `application_id`, `lead_id`, `course_id`, and `status`.
 
